@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Another open source Java image processing library.">
+
+
+    <title>Open Source Java Image Processing Library | SpacePix</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/space-pix.css">
+  </head>
+
+  <body>
+    <div id="sidebarMenu" class="ui right sidebar inverted vertical menu">
+      <div id="accordionMenu" style="background-color: #202020;" class="ui styled accordion">
+        <p id="contentTitle">Table of Content</p>
+        <div class="title contentItemText">
+          <i class="dropdown icon"></i> Aliquam
+        </div>
+        <div class="content contentItemTextOnly">
+          Aliquam sed dictum enim, sit amet vulputate lacus.
+          <div style="background-color: #202020;" class="accordion">
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Adipiscing
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Vivamus nibh <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Fusce <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Duis finibus <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Mauris
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Donec <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Mauris commodo <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Maecenas ut <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Phasellus
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Nulla maximus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Pellentesque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Etiam <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Curabitur eget <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="title contentItemText">
+          <i class="dropdown icon"></i> Sed eget mauris
+        </div>
+        <div class="content contentItemTextOnly">
+          Fusce sed odio feugiat, tristique purus id, congue lorem.
+          <div style="background-color: #202020;" class="accordion">
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Bibendum
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Sollicitudin <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Vitae eleifend <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Hendrerit sed<i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Class aptent
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Etiam ultricies <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Placerat <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Euismod <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque pulvinar <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Metus <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Etiam vel pellentesque
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Ut dapibus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Vivamus posuere metus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Integer <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Volutpat <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Donec egestas <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="title contentItemText">
+          <i class="dropdown icon"></i> Fusce sollicitudin
+        </div>
+        <div class="content contentItemTextOnly">
+          Fusce sed odio feugiat, tristique purus id, congue lorem.
+          <div style="background-color: #202020;" class="accordion">
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Bibendum
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Sollicitudin <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Vitae eleifend <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Hendrerit sed<i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Class aptent
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Etiam ultricies <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Placerat <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Euismod <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque pulvinar <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Metus <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Etiam vel pellentesque
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Ut dapibus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Vivamus posuere metus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Integer <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Volutpat <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Donec egestas <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="title contentItemText">
+          <i class="dropdown icon"></i> Mauris finibus
+        </div>
+        <div class="content contentItemTextOnly">
+          Aliquam sed dictum enim, sit amet vulputate lacus.
+          <div style="background-color: #202020;" class="accordion">
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Adipiscing
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Vivamus nibh <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Fusce <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Duis finibus <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Mauris
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Donec <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Mauris commodo <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Maecenas ut <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="title contentItemText">
+              <i class="dropdown icon"></i> Phasellus
+            </div>
+            <div class="content">
+              <a href="#" class="contentItemTextLink">
+                Nulla maximus <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Pellentesque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Etiam <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Quisque <i class="fas fa-angle-right"></i>
+              </a>
+              <br>
+              <a href="#" class="contentItemTextLink">
+                Curabitur eget <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: #303030;" class="pusher">
+      <a id="githubLabel" class="ui right corner massive teal label" href="#">
+        <i class="github icon"></i>
+      </a>
+
+      <button id="menuBtn" class="ui teal inverted tiny button">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="sidebarBtn" class="ui teal inverted button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div id="modalMenu" class="ui basic modal">
+        <i class="close icon menuListItem"></i>
+
+        <div class="ui center aligned grid">
+          <div class="ui sixteen wide column">
+            <a href="documentation.html" class="item menuListItem">Documentation</a>
+          </div>
+          <div class="ui sixteen wide column">
+            <a href="documentation.html" class="item menuListItem">Installation</a>
+          </div>
+          <div class="ui sixteen wide column">
+            <a href="tutorials.html" class="item menuListItem">Tutorials</a>
+          </div>
+          <div class="ui sixteen wide column">
+            <a href="community.html" class="item menuListItem">Community</a>
+          </div>
+          <div class="ui sixteen wide column">
+            <a href="blog.html" class="item menuListItem">Blog</a>
+          </div>
+        </div>
+      </div>
+
+      <img id="mainBGImg" class="ui image" src="res/images/bg2.png" alt="SpacePix">
+
+      <div id="menuList" class="ui horizontal list">
+        <a href="documentation.html" class="item menuListItem">Documentation</a>
+        <a href="documentation.html" class="item menuListItem">Installation</a>
+        <a href="tutorials.html" class="item menuListItem">Tutorials</a>
+        <a href="community.html" class="item menuListItem">Community</a>
+        <a href="blog.html" class="item menuListItem">Blog</a>
+      </div>
+
+      <a id="logo" class="ui small image" href="index.html">
+        <img src="res/images/logo.png" alt="SpacePix Logo">
+      </a>
+
+      <div class="ui stackable grid docGrid">
+        <div class="ui sixteen wide column">
+          <h1 class="docTitle">Documentation</h1>
+        </div>
+
+        <div class="ui sixteen wide column">
+          <p class="docTitleDescription">
+            Fusce sollicitudin, sapien vel interdum tincidunt, justo felis dictum sem, vel faucibus dolor urna vitae nisi. Donec egestas lectus id risus sodales, id tempor arcu placerat. Integer a lacus magna.
+          </p>
+        </div>
+
+        <div class="ui sixteen wide column">
+          <p class="docDescription">
+            Nulla placerat pulvinar commodo. <a class="contentItemTextLink" href="#"><b>Integer</b></a> at libero libero. Morbi sodales scelerisque eros, posuere scelerisque justo <a href="#" class="contentItemTextLink"><b>tristique</b></a> vel.
+          </p>
+        </div>
+
+        <div style="margin-left: 3%;" class="ui sixteen wide column">
+          <div class="ui inverted ordered list">
+            <div class="item docDescription">
+              Duis vulputate
+              <div class="list">
+                <div class="item">
+                  Donec ac feugiat est
+                </div>
+                <div class="item">
+                  Fringilla ligula
+                </div>
+                <div class="item">
+                  Integer et arcu lorem
+                </div>
+              </div>
+            </div>
+
+            <div class="item docDescription">
+              Etiam at ultrices nisi
+              <div class="list">
+                <div class="item">
+                  Donec consequat
+                </div>
+                <div class="item">
+                  Sed posuere quam sit amet
+                </div>
+                <div class="item">
+                  Vestibulum ac odio sed mauris
+                </div>
+                <div class="item">
+                  Pellentesque mollis
+                </div>
+                <div class="item">
+                  Pellentesque faucibus
+                </div>
+                <div class="item">
+                  Duis ac massa ac metus luctus
+                </div>
+              </div>
+            </div>
+
+            <div class="item docDescription">
+              Nullam tincidunt
+              <div class="list">
+                <div class="item">
+                  Duis vulputate velit
+                </div>
+                <div class="item">
+                  Vestibulum ac odio
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui sixteen wide column">
+          <h3 class="docSubTitle">Morbi Nibh</h3>
+        </div>
+
+        <div class="ui sixteen wide column">
+          <p class="docDescription">
+            Integer ac lorem nec erat blandit gravida eget in lorem. Vestibulum volutpat, justo et ornare egestas, ipsum ligula condimentum eros, non pellentesque ipsum elit vel erat. Aenean auctor nisl eu mauris interdum rhoncus. Quisque id mi diam. Vivamus malesuada, urna ut sollicitudin rhoncus, nisi quam laoreet lacus, et mattis nunc tortor ornare lacus. Nulla et purus facilisis justo elementum dignissim maximus ut magna.
+            <i><b>Pellentesque ultricies commodo arcu et dignissim. Vivamus pharetra in dui at sagittis.</b></i>
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;" class="ui seven wide column sectionCodeCol">
+          <span style="color: #CE56FF;" class="sectionCode">public </span>
+          <span style="color: #CE56FF;" class="sectionCode">class </span>
+          <span style="color: #FFAD56;" class="sectionCode">ImageTrimmer </span>
+          <span style="color: #CE56FF;" class="sectionCode">extends </span>
+          <span style="color: #40e0d0" class="sectionCode">SpacePixTrimmer </span>
+          <span style="color: white;" class="sectionCode">{</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">private final </span>
+          <span style="color: #FFAD56;" class="sectionCode">float </span>
+          <span style="color: white; font-style: italic;" class="sectionCode">TRIM_RATIO </span>
+          <span style="color: #FF5656;" class="sectionCode">= </span>
+          <span style="color: white;" class="sectionCode">3.7f;</span>
+          <br>
+          <br>
+          <span style="color: #FFAD56; padding-left: 5%;" class="sectionCode">@Override</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">public </span>
+          <span style="color: #FFAD56;" class="sectionCode">SpacePixObject </span>
+          <span style="color: #569BFF;" class="sectionCode">trimImage</span>
+          <span style="color: white;" class="sectionCode">() {</span>
+          <br>
+          <span style="color: #569BFF; padding-left: 10%;" class="sectionCode">setRatio</span>
+          <span style="color: white;" class="sectionCode">(</span>
+          <span style="color: white; font-style: italic;" class="sectionCode">TRIM_RATIO</span>
+          <span style="color: white;" class="sectionCode">);</span>
+          <br>
+          <br>
+          <span style="color: #CE56FF; padding-left: 10%;" class="sectionCode">return </span>
+          <span style="color: #569BFF;" class="sectionCode">doTrim</span>
+          <span style="color: white;" class="sectionCode">();</span>
+          <br>
+          <span style="color: white; padding-left: 5%;" class="sectionCode">}</span>
+          <br>
+          <span style="color: white;" class="sectionCode">}</span>
+        </div>
+
+        <div style="margin-top: 20px;" class="ui seven wide right floated column sectionCodeCol">
+          <span style="color: #CE56FF;" class="sectionCode">public </span>
+          <span style="color: #CE56FF;" class="sectionCode">class </span>
+          <span style="color: #FFAD56;" class="sectionCode">PixelAnalyzer </span>
+          <span style="color: #CE56FF;" class="sectionCode">extends </span>
+          <span style="color: #40e0d0" class="sectionCode">SpacePixJobsAdapter </span>
+          <span style="color: white;" class="sectionCode">{</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">private </span>
+          <span style="color: #FFAD56;" class="sectionCode">string </span>
+          <span style="color: white;" class="sectionCode">inputFile </span>
+          <span style="color: #FF5656;" class="sectionCode">= </span>
+          <span style="color: white;" class="sectionCode">"demo.png";</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">private </span>
+          <span style="color: #FFAD56;" class="sectionCode">string </span>
+          <span style="color: white;" class="sectionCode">outputFile </span>
+          <span style="color: #FF5656;" class="sectionCode">= </span>
+          <span style="color: white;" class="sectionCode">"result.json";</span>
+          <br>
+          <br>
+          <span style="color: #FFAD56; padding-left: 5%;" class="sectionCode">@Override</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">public </span>
+          <span style="color: #FFAD56;" class="sectionCode">void </span>
+          <span style="color: #569BFF;" class="sectionCode">analyzeAndWrite</span>
+          <span style="color: white;" class="sectionCode">() {</span>
+          <br>
+          <span style="color: #FFAD56; padding-left: 10%;" class="sectionCode">SpacePix</span>
+          <span style="color: white;" class="sectionCode">.</span>
+          <span style="color: #569BFF; font-style: italic;" class="sectionCode">readFile</span>
+          <span style="color: white;" class="sectionCode">(</span>
+          <span style="color: white;" class="sectionCode">inputFile</span>
+          <span style="color: white;" class="sectionCode">, </span>
+          <span style="color: #FFAD56;" class="sectionCode">SpacePixFile</span>
+          <span style="color: white;" class="sectionCode">.</span>
+          <span style="color: #EBFF56; font-style: italic;" class="sectionCode">PNG</span>
+          <span style="color: white;" class="sectionCode">);</span>
+          <br>
+          <br>
+          <span style="color: #FFAD56; padding-left: 10%;" class="sectionCode">AlphaAnalyzer </span>
+          <span style="color: white;" class="sectionCode">analyzer </span>
+          <span style="color: #FF5656;" class="sectionCode">= new </span>
+          <span style="color: #FFAD56;" class="sectionCode">AlphaAnalyzer</span>
+          <span style="color: white;" class="sectionCode">();</span>
+          <br>
+          <span style="color: white; padding-left: 10%;" class="sectionCode">analyzer.</span>
+          <span style="color: #569BFF;" class="sectionCode">setOutputFile</span>
+          <span style="color: white;" class="sectionCode">(outputFile);</span>
+          <br>
+          <span style="color: white; padding-left: 10%;" class="sectionCode">analyzer.</span>
+          <span style="color: #FFAD56;" class="sectionCode">Settings</span>
+          <span style="color: white;" class="sectionCode">.</span>
+          <span style="color: #EBFF56;" class="sectionCode">indentation </span>
+          <span style="color: #FF5656;" class="sectionCode">= true</span>
+          <span style="color: white;" class="sectionCode">;</span>
+          <br>
+          <span style="color: white; padding-left: 10%;" class="sectionCode">analyzer.</span>
+          <span style="color: #569BFF;" class="sectionCode">startAnalyzingAndWrite</span>
+          <span style="color: white;" class="sectionCode">();</span>
+          <br>
+          <span style="color: white; padding-left: 5%;" class="sectionCode">}</span>
+          <br>
+          <span style="color: white;" class="sectionCode">}</span>
+        </div>
+
+        <div style="margin-top: 20px;" class="ui sixteen wide column">
+          <div class="ui warning icon message">
+            <i class="info circle icon"></i>
+            <div class="content">
+              <div class="header warningText">
+                <b>Aliquam erat volutpat.</b>
+              </div>
+              <p class="warningText">
+                Aliquam sed dictum enim, sit amet vulputate lacus. Nulla felis nibh, lacinia sed sagittis vel, consequat vehicula lorem. Pellentesque libero orci, interdum et hendrerit sed, posuere in nulla. Aliquam in pulvinar neque. Duis interdum nulla a dui eleifend, ut hendrerit nunc eleifend. Aliquam erat volutpat. Suspendisse in ex non sapien ornare mattis. Mauris commodo sollicitudin ligula sit amet hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px;" class="ui sixteen wide column">
+          <h3 class="docSubTitle">Nam Egestas</h3>
+        </div>
+
+        <div class="ui sixteen wide column">
+          <p class="docDescription">
+            Nam egestas, purus id semper pharetra, odio risus ultrices odio, id interdum neque tellus a libero. Quisque accumsan tristique lorem eu varius. Nullam semper odio quis pulvinar sodales. Morbi sit amet orci ligula. Praesent lacus diam, pellentesque eu ligula eget, gravida ultrices purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vel aliquam velit. Suspendisse pretium ullamcorper elit, sed posuere leo pretium eu.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; padding-left: 5%;" class="ui sixteen wide column">
+          <h3 class="docMinorSubTitle">A. Vestibulum</h3>
+          <p class="docDescription">
+            Ut dapibus euismod porttitor. Etiam vel pellentesque sapien, in aliquam dui. Vivamus posuere metus id est pellentesque, eget malesuada nulla dapibus. <a href="#" class="contentItemTextLink"><b>Pellentesque</b></a> rhoncus urna in semper aliquam.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; padding-left: 5%;" class="ui sixteen wide column">
+          <h3 class="docMinorSubTitle">B. Suspendisse commodo</h3>
+          <p class="docDescription">
+            Etiam ultricies, leo vel <a href="#" class="contentItemTextLink"><b>dignissim</b></a> tempus, odio arcu placerat nulla, et porttitor justo nunc eget neque. Nullam et ipsum neque.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px; padding-left: 5%;" class="ui sixteen wide column">
+          <h3 class="docMinorSubTitle">C. Ut vitae</h3>
+          <p class="docDescription">
+            Curabitur <a href="#" class="contentItemTextLink"><b>accumsan</b></a> mauris et molestie aliquet. Praesent id dui nec odio venenatis rhoncus. Curabitur vel massa at tellus mollis placerat sit amet et velit. Phasellus porta, libero ac pretium porttitor, enim sem eleifend quam, non eleifend mauris nunc in arcu. <a href="#" class="contentItemTextLink"><b>Morbi</b></a> pellentesque eleifend enim in laoreet. In vehicula tellus in sapien condimentum, eu efficitur lacus maximus.
+          </p>
+        </div>
+
+        <div class="ui ten wide middle aligned column">
+          <p class="sectionTitle">Nam Ipsum Enim</p>
+          <p class="sectionText">
+            Ut non leo metus. Praesent maximus metus sed vehicula porttitor. Nullam ultrices nec urna eu egestas. In ex nulla, lobortis sit amet eleifend a, pulvinar non urna. Aliquam fermentum euismod aliquet. Phasellus urna felis, feugiat vel ullamcorper in, mattis nec augue.
+          </p>
+        </div>
+
+        <div class="ui six wide column sectionCodeCol">
+          <span style="color: #CE56FF;" class="sectionCode">public </span>
+          <span style="color: #CE56FF;" class="sectionCode">class </span>
+          <span style="color: #FFAD56;" class="sectionCode">ImageTrimmer </span>
+          <span style="color: #CE56FF;" class="sectionCode">extends </span>
+          <span style="color: #40e0d0" class="sectionCode">SpacePixTrimmer </span>
+          <span style="color: white;" class="sectionCode">{</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">private final </span>
+          <span style="color: #FFAD56;" class="sectionCode">float </span>
+          <span style="color: white; font-style: italic;" class="sectionCode">TRIM_RATIO </span>
+          <span style="color: #FF5656;" class="sectionCode">= </span>
+          <span style="color: white;" class="sectionCode">3.7f;</span>
+          <br>
+          <br>
+          <span style="color: #FFAD56; padding-left: 5%;" class="sectionCode">@Override</span>
+          <br>
+          <span style="color: #CE56FF; padding-left: 5%;" class="sectionCode">public </span>
+          <span style="color: #FFAD56;" class="sectionCode">SpacePixObject </span>
+          <span style="color: #569BFF;" class="sectionCode">trimImage</span>
+          <span style="color: white;" class="sectionCode">() {</span>
+          <br>
+          <span style="color: #569BFF; padding-left: 10%;" class="sectionCode">setRatio</span>
+          <span style="color: white;" class="sectionCode">(</span>
+          <span style="color: white; font-style: italic;" class="sectionCode">TRIM_RATIO</span>
+          <span style="color: white;" class="sectionCode">);</span>
+          <br>
+          <br>
+          <span style="color: #CE56FF; padding-left: 10%;" class="sectionCode">return </span>
+          <span style="color: #569BFF;" class="sectionCode">doTrim</span>
+          <span style="color: white;" class="sectionCode">();</span>
+          <br>
+          <span style="color: white; padding-left: 5%;" class="sectionCode">}</span>
+          <br>
+          <span style="color: white;" class="sectionCode">}</span>
+        </div>
+
+        <div style="margin-top: 20px;" class="ui sixteen wide center aligned column">
+          <a id="getStartedBtn" class="ui inverted teal huge button" href="get-started.html">Take the Tutorial</a>
+        </div>
+      </div>
+
+      <footer>
+        <div class="ui stackable grid">
+          <div class="ui eight wide middle aligned center aligned column">
+            <a href="index.html">
+              <img class="ui medium centered image" src="res/images/logo.png" alt="SpaccePix">
+            </a>
+
+            <a id="mitLicense" target="_blank" href="https://opensource.org/licenses/MIT">
+              Licensed under MIT.
+            </a>
+          </div>
+
+          <div class="ui eight wide center aligned column">
+            <div class="ui list">
+              <a href="documentation.html" class="item menuListItem">Documentation</a>
+              <a href="documentation.html" class="item menuListItem">Installation</a>
+              <a href="tutorials.html" class="item menuListItem">Tutorials</a>
+              <a href="community.html" class="item menuListItem">Community</a>
+              <a href="blog.html" class="item menuListItem">Blog</a>
+            </div>
+          </div>
+
+          <div class="ui sixteen wide center aligned column">
+            <a class="brand" href="https://clasxsoft.com">All rights reserved. | ClasX Software &reg</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="js/space-pix.js"></script>
+</html>
